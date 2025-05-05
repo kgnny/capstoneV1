@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.experiment">
+
+    <application
+        android:name=".ExperimentApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <!-- Main Activity (Launch Activity) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"/>
+
+        <!-- Student Dashboard Activity -->
+        <activity
+            android:name=".StudentDashboardActivity"
+            android:exported="false"/>
+
+        <!-- Admin Dashboard Activity -->
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false"/>
+
+        <!-- Registration Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".StudentLandingPage"
+            android:exported="false"/>
+
+        <activity
+            android:name=".CareerInfoActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".CareerDetailActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ManageAvailabilityActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".AdministratorsActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ScheduleAppointmentActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ManageRecommendationsActivity"
+            android:label="Manage Course Recommendations"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ManageCoursesActivity"
+            android:exported="false" />
+
+
+        <activity android:name=".CourseDetailsActivity"
+            android:label="Course Details"
+            android:parentActivityName=".StudentDashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StudentDashboardActivity" />
+        </activity>
+
+        <activity android:name=".SavedCoursesActivity"
+            android:label="Saved Courses"
+            android:parentActivityName=".StudentDashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StudentDashboardActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

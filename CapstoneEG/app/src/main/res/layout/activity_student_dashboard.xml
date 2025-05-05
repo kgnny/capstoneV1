@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for a class..." />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:onClick="searchClasses" />
+
+    <!-- Available Classes -->
+    <ListView
+        android:id="@+id/classListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- View Saved Courses Button -->
+    <Button
+        android:id="@+id/btnViewSavedCourses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Saved Courses"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Return Button (reusing the existing logoutButton) -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return to Student Dashboard"
+        android:onClick="logoutUser"/>
+
+</LinearLayout>
